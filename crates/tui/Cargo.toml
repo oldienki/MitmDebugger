@@ -1,0 +1,19 @@
+[package]
+name = "tui"
+authors.workspace = true
+edition.workspace = true
+version.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme.workspace = true
+exclude.workspace = true
+
+[dependencies]
+tv = { workspace = true }
+logs = { workspace = true }
+tokio = { workspace = true }
+backend = { workspace = true }
+i18n = { workspace = true }
+anyhow = "1.0.104"
