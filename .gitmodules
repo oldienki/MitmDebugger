@@ -1,0 +1,3 @@
+[submodule "external/tvision-rs"]
+	path = external/tvision-rs
+	url = ssh://git@github.com/oetiker/tvision-rs.git
