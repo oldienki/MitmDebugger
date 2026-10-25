@@ -5,8 +5,8 @@
 
 - **Author:** Cascade agent session
 - **Created:** 2026-10-25
-- **Status:** created
-- **Implemented:** —
+- **Status:** implemented
+- **Implemented:** 2026-10-25
 
 ## 1. Summary
 
