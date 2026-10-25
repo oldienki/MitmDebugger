@@ -17,3 +17,6 @@ tokio = { workspace = true }
 backend = { workspace = true }
 i18n = { workspace = true }
 anyhow = "1.0.104"
+
+[dev-dependencies]
+tracing = { workspace = true }
