@@ -1,6 +1,5 @@
+use crate::backend::*;
 use flume::{Receiver, Sender, bounded};
-
-use crate::*;
 
 #[allow(dead_code)]
 pub struct MockBackend {

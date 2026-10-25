@@ -28,7 +28,7 @@ fn status_defs() -> Vec<StatusDef> {
             stat.item("~F1~ Help", KeyEvent::from(Key::F(1)), Command::HELP)
                 .item("~F9~ Menu", KeyEvent::from(Key::F(9)), Command::MENU)
                 .item(i18n!("~Alt-L~ Logs"), alt_char_event('l'), CMD_LOGS)
-                .item("~Ctrl-Q~ Quit", ctrl_char_event('q'), Command::QUIT)
+                .item("~Alt-Q~ Quit", alt_char_event('q'), Command::QUIT)
         })
         .build()
 }
@@ -41,12 +41,13 @@ pub fn make_status_line(r: Rect) -> Box<dyn View> {
 
 fn app_menu() -> Menu {
     Menu::builder()
-        .submenu("~F~ile", alt_char_event('f'), |m| {
-            m.command_key(i18n!("~L~ogs"), CMD_LOGS, alt_char_event('l'), "Alt-L")
-                .command_key("~Q~uit", Command::QUIT, ctrl_char_event('q'), "Ctrl-Q")
+        .submenu("~F~ile", alt_char_event('f'), |menu| {
+            menu.command_key(i18n!("~L~ogs"), CMD_LOGS, alt_char_event('l'), "Alt-L")
+                .separator()
+                .command_key("~Q~uit", Command::QUIT, alt_char_event('q'), "Alt-Q")
         })
-        .submenu("~H~elp", alt_char_event('h'), |m| {
-            m.command_key("~A~bout...", CMD_ABOUT, ctrl_char_event('a'), "Ctrl-A")
+        .submenu("~H~elp", alt_char_event('h'), |menu| {
+            menu.command("~A~bout...", CMD_ABOUT)
         })
         .build()
 }
