@@ -1,0 +1,27 @@
+[package]
+name = "mitmdbg"
+version = "0.0.1"
+
+description = "MITM Debugger"
+
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+
+[dependencies]
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+serde_json = { workspace = true }
+serde = { workspace = true }
+tokio = { workspace = true }
+clap = { workspace = true }
+tui = { workspace = true }
+logs = { workspace = true }
+backend = { workspace = true }
+
+

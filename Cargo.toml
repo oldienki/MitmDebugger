@@ -1,0 +1,42 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/*",
+#    "examples/*",
+    "mitmdbg",
+]
+exclude = [
+#    "examples/*"
+    "external/tvision-rs",
+]
+
+[workspace.package]
+authors = ["Alexey Sudachen (the@oldienki.xyz)"]
+edition = "2024"
+version = "0.0.1"
+homepage = "https://github.com/oldienki/MitmDebugger"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/oldienki/MitmDebugger"
+rust-version = "1.96.0"
+readme = "README.md"
+exclude = []
+
+[workspace.dependencies]
+anyhow = "1.0"
+thiserror = "2.0"
+tokio = { version = "1.53", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+clap = { version = "4", features = ["derive"] }
+crossterm = "0.29"
+tracing-appender = "0.2"
+async-trait = "0.1.92"
+flume = "0.12"
+#tvision-rs = "0.18"
+tv = { package = "tvision-rs", version = "0.18", path = "external/tvision-rs"}
+i18n = {  path = "crates/i18n" }
+logs = { path = "crates/logs" }
+backend = { path = "crates/backend" }
+tui = { path = "crates/tui" }
